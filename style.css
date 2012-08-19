@@ -1,0 +1,504 @@
+/*
+Theme Name: KatyMutch
+Theme URI: http://www.katymutch.com
+Description: Theme for katymutch.com
+Author: Tom Halligan
+Author URI: http://www.tomhalligan.co.uk/
+Version: 1.0
+Tags: custom-menu, featured-images, microformats, sticky-post, threaded-comments
+License: GNU General Public License v2.0 | This theme is completely free and open source to use as you like for both personal and commercial projects without any limitations.
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url("../blankslate/style.css");
+
+/*html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}*/
+
+/**
+FONTS
+**/
+
+@font-face{
+	font-family: 'JennaSue';
+	src: url('fonts/jenna_sue/JennaSue.ttf');
+}
+
+@font-face{
+	font-family: 'AndaleMono';
+	src: url('fonts/andale-mono/AndaleMono.ttf');
+}
+
+/**
+General
+*/
+body{
+	background-color: #eee;
+	
+	background-color: #F1F0E7;
+	background-image: url('images/rockywall.png');
+	
+}
+
+div#outer-wrapper{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+	box-shadow: 0px 0px 10px black;
+
+}
+div#container{
+	font-family: Arial;
+}
+
+div.post, div.page{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+/*layout*/
+div#wrapper{
+	width: 720px;
+	/*background-color: #ffffff;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#branding{
+	background-image: url('images/HeaderPhoto.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-bottom: 5px;
+	text-align: center;
+	color: black;
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 244px;
+	padding: 0px;
+	border: solid 1px #000;
+}
+
+div#blog-title{
+	position: absolute;
+	bottom: 25px;
+	text-align: right;
+	width: 100%;
+	z-index: 0;
+}
+
+div#blog-title h1{
+	display: none;
+	text-align: right;
+	font-size: 1.5em;
+	line-height: 25% ! important;
+	z-index: 2;
+	vertical-align: text-bottom;	
+}
+
+div#branding a{
+	text-decoration: none;
+	color: #5e3929;
+	margin-right: 15px;
+}
+
+img#header_image{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+a#home_link{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+div#branding a:visited{
+	color: #5e3929;
+}
+
+#content{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content img{
+	border: solid 1px #999;
+	border-right: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+	padding: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content img.portrait{
+	display: inline;	
+}
+
+
+
+img#banner{
+	display: none;
+	position: relative;
+	width: 100%;
+	z-index: -1;
+	height: 15px;
+}
+
+div#menu-container{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background-image: url('images/transparent-bg.png');
+	margin: 0px;
+	padding: 0px;
+}
+
+/*Navigation*/
+ul.menu{
+	height: 2em;
+	padding-top: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "IM Fell Great Primer SC", serif, AndaleMono;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	text-align: center;
+	/*border-bottom: solid 1px #000000;*/
+}
+
+ul.menu ul{
+	background-color: #C5B49C;
+	/*background-image: url('images/transparent-bg.png');*/
+	width: 150px;
+	border: solid 1px black;
+}
+
+ul.menu ul li{
+	padding: 5px;	
+}
+
+
+ul.menu li{
+	display: inline-block;
+	height: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ul.menu a, ul.menu a:visited{
+	line-height: 0.8em;
+	color: #000000 ! important;
+	text-decoration: none;
+	vertical-align: middle;
+
+}
+
+ul.menu a:hover{
+	color: #333333 ! important;	
+}
+
+ul.menu li.current_page_item{
+	/*text-decoration: underline;*/
+}
+
+#nav-above{
+	text-transform: uppercase;
+	font-size: small;
+}
+
+#nav-below{
+	text-transform: uppercase;
+	font-size: small;
+
+}
+
+.navigation {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	height: 2em;
+}
+
+.navigation a{
+	color: #555555;
+	text-decoration: none;
+}
+
+.navigation .nav-previous{
+	float: left;
+	
+}
+
+.navigation .nav-next{
+	float: right;
+}
+
+.paginated-navigation{
+	text-align: center;	
+		margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	height: 2em;
+}
+
+
+.paginated-navigation a{
+	color: #555555;
+	text-decoration: none;
+}
+
+/**
+	When we paginate, 'next' means 'next page', not 'next post'. 
+	Next = older posts.
+	Previous = newer posts.
+*/
+.paginated-navigation .nav-previous{
+	float: right;	
+}
+
+.paginated-navigation .nav-next{
+	float: left;
+}
+
+
+#archive-menu-list{
+	display: none;
+}
+
+#archive-menu-list li{	
+}
+
+/**Footer**/
+div#footer{
+	margin-bottom: 10px;	
+}
+p#copyright{
+	margin-top: 15px;
+	text-align: center;
+	font-family: Arial;
+	font-size: small;
+}
+
+/* Post styles */
+.post, .page{
+	text-align: justify;
+	padding-bottom: 10px;
+
+}
+
+.entry-title, .entry-title a, .entry-title a:visited{
+	text-decoration: none;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #000000;
+	font-family: Arial;
+
+}
+
+.entry-header{
+	margin-bottom: 15px;
+	font-size: medium;
+	text-transform: uppercase;
+}
+
+.entry-header h2{
+	display: inline;	
+}
+
+.entry-meta{
+	float: right;
+	text-align: right;	
+}
+
+.entry-meta *{
+	color: #555555;
+	text-decoration: none;	
+}
+
+.entry-meta a{
+	text-decoration: underline;	
+}
+
+.entry-date{
+	color: #555555;
+	text-transform: none;
+	font-size: small;
+}
+
+.entry-content{
+	color: #222222;
+	color: #555555;
+	font-size: 0.8em;
+	font-weight: 500;
+	font-variant: small-caps;
+}
+
+.entry-content img{
+}
+
+.entry-content p{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding-bottom: 10px;
+	text-align: justify ! important;
+	line-height: 1.5em;
+}
+
+.entry-content a{
+	color: #AAA;
+	text-decoration: none;	
+}
+
+.entry-content a:hover{
+	text-decoration: underline;	
+}
+
+.entry-utility {
+	font-size: small;
+	color: #555555;	
+}
+
+.entry-utility *{
+	font-size: small;
+	color: #555555;
+	text-decoration: none;	
+}
+
+.entry-utility a{
+	text-decoration: underline;	
+}
+
+.entry-utility-item{
+	display: block;
+}
+
+.entry-seperator{
+	width: 75%;
+	height: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: solid 1px #dddddd;	
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+
+/*
+Comments
+*/
+div#comments{
+	border-radius: 5px;
+}
+
+div#comments-list h3{
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: medium;	
+}
+
+li.comment{
+	border: solid 1px #dddddd;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+li.even{
+	background-color: #eeeeee;
+}
+
+li.odd{
+	background-color: #eeeee0;
+}
+
+.vcard{
+	background-color: #ffffff;
+	padding: 5px;	
+	border: solid 1px #dddddd;
+	border-radius: 5px;
+}
+
+.vcard img{
+	height: 50px;
+	width: 50px;	
+}
+
+.comment-author span{
+	vertical-align: top;
+	font-weight: bold;
+}
+
+.comment-author a{
+	color: #abcdef;
+	text-decoration: none;
+}
+
+div#respond{
+	color: #555555;
+	font-size: small;
+	margin-top: 20px;
+}
+
+div#respond #reply-title{
+	display: none;	
+}
+
+p#login{
+	font-size: small;	
+}
+
+p#login a{
+	color: #555555;
+	text-decoration: underline;
+}
+
+p#comment-notes{
+	font-size: small;	
+}
+
+div#form-allowed-tags{
+	font-size: small;
+	color: #555555;
+	display: none;
+}
+
+div#respond h2{
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: medium;
+}
+
+.form-label{
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+.comment-form-comment{
+	margin-top: 10px;
+}
+
+
+/**
+Special
+*/
+.important_center{
+	text-align: center ! important;	
+}
