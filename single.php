@@ -36,7 +36,7 @@ get_the_category_list(', '),
 get_the_tag_list( __( ' and tagged ', 'blankslate' ), ', ', '' ) 
 ) ?>
 <?php if ( ('open' == $post->comment_status) && ('open' == $post->ping_status) ) : // ?>
-<?php show_hide_comments_form(); ?>
+<?php show_hide_comments_link(); ?>
 <?php /*printf( __( '<a class="comment-link" href="#respond" title="Add Comment">Add Comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'blankslate' ), get_trackback_url() ) */?>
 <?php printf( __( ' or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'blankslate' ), get_trackback_url() ) ?>
 <?php elseif ( !('open' == $post->comment_status) && ('open' == $post->ping_status) ) : // ?>
