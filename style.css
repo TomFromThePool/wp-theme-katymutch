@@ -131,7 +131,7 @@ div#branding a:visited{
 	margin-right: auto;
 }
 
-#content img{
+#content img[class*="wp-image"]{
 	width: 98%;
 	border: solid 1px #999;
 	border-right: solid 1px #ccc;

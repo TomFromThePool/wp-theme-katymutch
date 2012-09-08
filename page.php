@@ -9,7 +9,7 @@
 <?php edit_post_link( __( 'Edit', 'blankslate' ), '<span class="edit-link">', '</span>' ) ?>
 </div>
 </div>
-<?php comments_template( '', true ); ?>
+<?php /*comments_template( '', true );*/ ?>
 </article>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
