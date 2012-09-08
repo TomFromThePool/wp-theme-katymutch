@@ -12,10 +12,10 @@
 <?php endif; ?>
 <?php rewind_posts(); ?>
 <?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-<div id="nav-above" class="navigation">
+<?php /*<div id="nav-above" class="navigation">
 <p class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> older articles', 'blankslate' )) ?></p>
 <p class="nav-next"><?php previous_posts_link(__( 'newer articles <span class="meta-nav">&raquo;</span>', 'blankslate' )) ?></p>
-</div>
+</div>*/ ?>
 <?php } ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -47,9 +47,8 @@
 </div>
 <?php endwhile; ?>
 <?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-<div id="nav-below" class="navigation">
-<p class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> older articles', 'blankslate' )) ?></p>
-<p class="nav-next"><?php previous_posts_link(__( 'newer articles <span class="meta-nav">&raquo;</span>', 'blankslate' )) ?></p>
+<div id="nav-below" class="paginated-navigation">
+	<?php wp_paginate(); ?>
 </div>
 <?php } ?>
 </div>
