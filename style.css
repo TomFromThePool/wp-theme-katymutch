@@ -275,11 +275,8 @@ ul.menu li.current_page_item{
 }
 
 
-#archive-menu-list{
+.dropdown-meny ul{
 	display: none;
-}
-
-#archive-menu-list li{	
 }
 
 /**Footer**/
