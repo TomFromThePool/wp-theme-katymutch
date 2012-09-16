@@ -33,7 +33,6 @@ General
 */
 body{
 	background-color: #eee;
-	
 	background-color: #F1F0E7;
 	background-image: url('images/rockywall.png');
 	
@@ -43,7 +42,7 @@ div#outer-wrapper{
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: white;
+	background-color: #FFFFFE;
 	padding-top: 25px;
 	padding-bottom: 25px;
 	margin-bottom: 25px;
@@ -133,11 +132,14 @@ div#branding a:visited{
 }
 
 #content img[class*="wp-image"]{
-	width: 98%;
 	border: solid 1px #999;
 	border-right: solid 1px #ccc;
 	border-top: solid 1px #ccc;
 	padding: 1%;
+}
+
+#content .post img[class*="wp-image"]{
+	width: 98%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -300,11 +302,10 @@ p#copyright{
 .page-title, .entry-title, .entry-title a, .entry-title a:visited{
 	text-transform: uppercase;
 	text-decoration: none;
-	font-size: 0.9em;
+	font-size: 1em;
 	font-weight: bold;
-	color: #000000;
-	font-family: Arial;
-
+	color: #800000;
+	font-family: Corbel, sans-serif;
 }
 
 .entry-header{
@@ -343,8 +344,7 @@ p#copyright{
 }
 
 .entry-content{
-	color: #222222;
-	color: #555555;
+	color: #3F3737;
 	font-size: 0.8em;
 	font-weight: 500;
 	font-variant: small-caps;
@@ -506,4 +506,41 @@ Special
 */
 .important_center{
 	text-align: center ! important;	
+}
+
+.summary-container{
+	margin-top: 1em;
+	padding-left: 3%;
+}
+
+/** Category Excerpts **/
+.category-post-summary{
+	display: inline-block;
+	width: 30%;
+	margin-top: 0 ! important;
+	margin-bottom: 0 ! important;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.category-post-summary .entry-summary img{
+	width: 100%;
+	margin: 0 ! important;
+	padding: 0 ! important;
+	margin-bottom: 0.5em;
+	box-shadow: 2px 2px 2px #333;
+
+}
+
+.category-post-summary a, .category-post-summary a:visited{
+	text-decoration: none;	
+}
+
+/** Page specific **/
+#content.about .entry-content img{
+	margin-right: 10px;
+}
+
+#content.about p{
+	vertical-align: top;	
 }
