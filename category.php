@@ -7,7 +7,7 @@
 <?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
 <?php } ?>
 <?php while ( have_posts() ) : the_post(); ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class("category-post-summary"); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class("multi-post-summary"); ?>>
 <a href="<?php the_permalink(); ?>" title="<?php printf( __('Read', 'blankslate'), the_title_attribute('echo=0') ); ?>" rel="bookmark">
 <div class="entry-summary">
 <?php the_post_thumbnail(); ?>
