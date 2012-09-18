@@ -1,4 +1,5 @@
 <?php
+
 update_option('image_default_link_type','none');
 
 load_theme_textdomain( 'blankslate', TEMPLATEPATH . '/languages' );
@@ -6,6 +7,8 @@ $locale = get_locale();
 $locale_file = TEMPLATEPATH . "/languages/$locale.php";
 if ( is_readable($locale_file) )
 require_once($locale_file);
+
+require_once ( get_stylesheet_directory() . '/theme-options.php' );
 
 /**
   Generate an archive menu.
