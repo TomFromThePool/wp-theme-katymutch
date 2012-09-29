@@ -118,7 +118,7 @@ a#home_link{
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
-	z-index: 1000;
+	z-ientry-contentndex: 1000;
 }
 
 div#branding a:visited{
@@ -170,6 +170,7 @@ div#menu-container{
 
 /*Navigation*/
 ul.menu{
+	position: relative;
 	height: 2em;
 	padding-top: 10px;
 	display: block;
@@ -179,14 +180,13 @@ ul.menu{
 	font-size: 0.9em;
 	text-transform: uppercase;
 	text-align: center;
-	/*border-bottom: solid 1px #000000;*/
 }
 
 ul.menu ul{
 	background-color: #C5B49C;
-	/*background-image: url('images/transparent-bg.png');*/
 	width: 150px;
 	border: solid 1px black;
+	z-index: 10;
 }
 
 ul.menu ul li{
@@ -347,7 +347,7 @@ p#copyright{
 	color: #3F3737;
 	font-size: 0.8em;
 	font-weight: 500;
-	font-variant: small-caps;
+	/*font-variant: small-caps;*/
 }
 
 .entry-content img{
