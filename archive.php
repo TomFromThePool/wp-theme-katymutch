@@ -1,10 +1,7 @@
 <?php get_header(); ?>
 <div id="content">
 <?php
-    $paged = (isset($_GET['paged'])) ? get_query_var('paged') : 1;
-    $date_args = (get_query_var('m')) ? get_query_var('m') : '201209';
-    $month = substr($date_args, strlen($date_args) - 2);
-    $year = substr($date_args, 0, strlen($date_args) - 2);
+    $paged = $wp_query->query_vars['paged'];
     
     //Get number of archive posts per page.
     $options = get_option('km_theme_options');
@@ -18,10 +15,8 @@
     $temp = $wp_query;
     $wp_query = null;
     $wp_query = new WP_Query($args);
-    $wp_query->query($query_string."&year=".$year."&monthnum=".$month."&paged=".$paged."&showposts=".$page_limit);
+    $wp_query->query($query_string."&paged=".$paged."&showposts=".$page_limit);
 
-    
-    //query_posts($query_string."&paged=".$paged_t."&showposts=".$page_limit);
 ?>
 <?php $wp_query->the_post(); ?>
 <?php if ( is_day() ) : ?>
