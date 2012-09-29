@@ -17,7 +17,11 @@
     	$page_limit = $wp_query->max_num_pages;
     }
     
-    query_posts($query_string."&paged=".$paged_t."&showposts=".$page_limit);
+    $temp = $wp_query;
+    $wp_query = null;
+    $wp_query = new WP_Query($args);
+    $wp_query->query($query_string."&paged=".$paged_t."&showposts=".$page_limit);
+    //query_posts($query_string."&paged=".$paged_t."&showposts=".$page_limit);
 ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class("multi-post-summary"); ?>>

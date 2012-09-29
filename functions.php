@@ -10,6 +10,21 @@ require_once($locale_file);
 
 require_once ( get_stylesheet_directory() . '/theme-options.php' );
 
+//Use correct template for monthly archive & category pages
+add_action('template_redirect', 'apply_archive_filter');
+function apply_archive_filter($url){
+	//Only apply the template if we have the 'paged' param
+	if(isset($_REQUEST['paged'])){
+	  if(isset($_REQUEST['m'])){
+	    load_template(locate_template('archive.php'), true);
+	    exit;
+	  } elseif(isset($_REQUEST['cat'])){
+	    load_template(locate_template('category.php'), true);
+	    exit;
+	  }
+	}
+}
+
 /**
   Generate an archive menu.
 */
