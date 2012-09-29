@@ -23,7 +23,6 @@
     
     //query_posts($query_string."&paged=".$paged_t."&showposts=".$page_limit);
 ?>
-<?php echo $paged; ?>
 <?php $wp_query->the_post(); ?>
 <?php if ( is_day() ) : ?>
 <h1 class="page-title"><?php printf( __( 'Daily Archives: <span>%s</span>', 'blankslate' ), get_the_time(get_option('date_format')) ) ?></h1>
