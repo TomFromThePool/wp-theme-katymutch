@@ -4,7 +4,7 @@ Theme URI: http://www.katymutch.com
 Description: Theme for katymutch.com
 Author: Tom Halligan
 Author URI: http://www.tomhalligan.co.uk/
-Version: 1.71
+Version: 1.72
 Tags: custom-menu, featured-images, microformats, sticky-post, threaded-comments
 License: GNU General Public License v2.0 | This theme is completely free and open source to use as you like for both personal and commercial projects without any limitations.
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -292,6 +292,16 @@ p#copyright{
 	font-size: small;
 }
 
+div#footer a, div#footer a:visited{
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+}
+
+div#footer a:hover{
+	text-decoration: underline;	
+}
+
 /* Post styles */
 .post, .page{
 	text-align: justify;
@@ -543,7 +553,14 @@ Special
 }
 
 #content.about .entry-content{
-	overflow: auto;
+}
+
+#content.about .featured-image-container{
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1em;
+	position: relative;fo
+	width: 45%;
 }
 
 #content.about .attachment-post-thumbnail{
@@ -551,7 +568,5 @@ Special
 	border-right: solid 1px #ccc;
 	border-top: solid 1px #ccc;
 	padding: 1%;
-	width: 45%;
-	margin-right: 10px;
-float: left;
+	width: 100%;
 }
