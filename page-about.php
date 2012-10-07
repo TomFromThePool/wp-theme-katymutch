@@ -7,6 +7,10 @@
 <?php the_post_thumbnail(); ?>
 </div><?php the_content(); ?>
 <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'blankslate' ) . '&after=</div>') ?>
+<div id="social-icons">
+<a href="http://www.twitter.com/katymutch" target="blank">L</a><a href="http://www.facebook.com/KatyMutchPhotography" target="blank">f</a><a href="http://www.pinterest.com/katymutch" target="blank">&</a>
+
+</div>
 <?php edit_post_link( __( 'Edit', 'blankslate' ), '<span class="edit-link">', '</span>' ) ?>
 </div>
 </div>

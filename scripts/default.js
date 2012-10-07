@@ -19,6 +19,8 @@ $(document).ready(function(){
 			});
     
 			$("ul.menu-main-menu li ul li:has(ul)").find("a:first").append(" &raquo; ");
+			
+			$("ul.menu").fadeIn("slow");
     	});
     	
     	/* Disable top-level links*/

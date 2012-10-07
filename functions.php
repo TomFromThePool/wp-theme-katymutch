@@ -44,6 +44,12 @@ function katy_category_menu(){
 	print "</ul>";	
 }
 
+/**Replace lazy-load placeholder*/
+add_filter( 'lazyload_images_placeholder_image', 'my_custom_lazyload_placeholder_image' );
+function my_custom_lazyload_placeholder_image( $image ) {
+	return "images/ajax-loader.gif";
+}
+
 /**
 Strip width and height attributes from post images
 */
